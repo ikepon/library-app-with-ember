@@ -12,7 +12,7 @@ export default Ember.Route.extend({
     saveInvitation(invitation) {
       const controller = this.get('controller');
 
-      invitation.save().then((response) => {
+      invitation.save().then(() => {
         controller.set('responseMessage', true);
       });
     }
