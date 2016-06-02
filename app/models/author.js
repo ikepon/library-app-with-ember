@@ -9,6 +9,8 @@ export default Model.extend({
 
   books: hasMany('book', {inverse: 'author', async: true}),
 
+  isNotValid: Ember.computed.empty('name'),
+
   randomize() {
     this.set('name', Faker.name.findName());
     return this;
